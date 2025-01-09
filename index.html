@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FoodBridge - Connecting Food to the Needy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('https://pics.craiyon.com/2023-09-21/2a88ef38beb248bf974a4701c7c12575.webp') no-repeat center center fixed;
+        background-size: cover;
+    }
+    .navbar-inverse {
+        background-color: rgba(0, 0, 0, 0.8);
+        border: none;
+    }
+    .navbar-inverse .navbar-brand, 
+    .navbar-inverse .nav > li > a {
+        color: #ffffff;
+    }
+    .navbar-inverse .navbar-nav > li > a:hover {
+        background-color: #ff9800;
+        color: #fff;
+    }
+    .hero-section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .hero-section h1 {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+    .hero-section p {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+    .hero-section .btn {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        margin: 5px;
+    }
+    .btn-donor {
+        background-color: #ff5722;
+        color: #fff;
+    }
+    .btn-donor:hover {
+        background-color: #e64a19;
+    }
+    .btn-ngo {
+        background-color: #4caf50;
+        color: #fff;
+    }
+    .btn-ngo:hover {
+        background-color: #388e3c;
+    }
+    footer {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        text-align: center;
+        padding: 15px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">FoodBridge</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">HOME</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">ABOUT <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Our Mission</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Team</a></li>
+        </ul>
+      </li>
+      <li><a href="#">CONTACT</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="ngo_login.html"><span class="glyphicon glyphicon-user"></span> NGO</a></li>
+      <li><a href="donor_login.html"><span class="glyphicon glyphicon-log-in"></span> Donor</a></li>
+      <li><a href="admin_login.html"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero-section">
+  <div>
+    <h1>Welcome to FoodBridge</h1>
+    <p>Connecting surplus food with those in need. Together, we can fight hunger and reduce waste.</p>
+    <a href="donor_login.html" class="btn btn-donor">Donate Food</a>
+<a href="ngo_login.html" class="btn btn-ngo">Request Food</a>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  © 2025 FoodBridge. All Rights Reserved.
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

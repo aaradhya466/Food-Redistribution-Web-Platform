@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Registration - FoodBridge</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://pics.craiyon.com/2023-09-21/2a88ef38beb248bf974a4701c7c12575.webp') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .navbar-inverse {
+            background-color: rgba(0, 0, 0, 0.8);
+            border: none;
+        }
+        .navbar-inverse .navbar-brand, 
+        .navbar-inverse .nav > li > a {
+            color: #ffffff;
+        }
+        .navbar-inverse .navbar-nav > li > a:hover {
+            background-color: #ff9800;
+            color: #fff;
+        }
+        .form-container {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 50px auto;
+        }
+        .form-container h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        label {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="number"], select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #ff5722;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #e64a19;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">FoodBridge</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="front_page.html">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="ngo_login.html"><span class="glyphicon glyphicon-user"></span> NGO</a></li>
+            <li><a href="donor_login.html"><span class="glyphicon glyphicon-log-in"></span> Donor</a></li>
+            <li><a href="admin_login.html"><span class="glyphicon glyphicon-user"></span> Admin</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Donor Registration Form -->
+<div class="form-container">
+    <h2>Donor Registration</h2>
+    <form action="connect.php" method="post">
+        <label for="name"><b>Name:</b></label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+        
+        <label for="email"><b>Email ID:</b></label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+        
+        <label for="password"><b>Password:</b></label>
+        <input type="password" id="password" name="password" required placeholder="Create a password">
+        
+        <label for="phone"><b>Phone Number:</b></label>
+        <input type="number" id="phone" name="phone" required placeholder="Enter your phone number">
+        
+        <label for="donor_type"><b>Donor Type:</b></label>
+        <select id="donor_type" name="donor_type" required>
+            <option value="Individual">Individual</option>
+            <option value="Restaurant">Restaurant</option>
+            <option value="Event Organizer">Event Organizer</option>
+            <option value="Caterer">Caterer</option>
+            <option value="Hotel">Hotel</option>
+            <option value="Corporate">Corporate</option>
+            <option value="Food Supplier">Food Supplier</option>
+        </select>
+        
+        <label for="address"><b>Pickup Address:</b></label>
+        <input type="text" id="address" name="address" required placeholder="Enter your address for food pickup">
+        
+        <input type="submit" value="Register">
+    </form>
+</div>
+
+<!-- Footer -->
+<footer>
+    © 2025 FoodBridge. All Rights Reserved.
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
