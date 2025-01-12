@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact Us - FoodBridge</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('https://via.placeholder.com/1500x1000') no-repeat center center fixed;
+        background-size: cover;
+        color: #fff;
+    }
+    .navbar-inverse {
+        background-color: #0e76a8;
+        border: none;
+    }
+    .navbar-inverse .navbar-brand, 
+    .navbar-inverse .nav > li > a {
+        color: #fff;
+    }
+    .navbar-inverse .navbar-nav > li > a:hover {
+        background-color: #17a2b8;
+        color: #fff;
+    }
+    .hero-section {
+        background-color: rgba(14, 118, 168, 0.7);
+        padding: 120px 0;
+        color: #fff;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .hero-section h1 {
+        font-size: 4.8rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    .hero-section p {
+        font-size: 1.6rem;
+    }
+    .contact-section {
+        padding: 80px 20px;
+        background: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin: 60px auto;
+        max-width: 1100px;
+    }
+    .contact-section h1 {
+        font-size: 3.8rem;
+        font-weight: 600;
+        color: #0e76a8;
+        margin-bottom: 30px;
+    }
+    .contact-section p {
+        font-size: 1.5rem;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        color: #555;
+    }
+    .contact-details {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        color: #0e76a8;
+    }
+    .contact-form label {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #555;
+    }
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 14px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1.3rem;
+        background-color: #f4f7fa;
+        color: black;
+    }
+    .contact-form textarea {
+        height: 200px;
+    }
+    .contact-form button {
+        background-color: #17a2b8;
+        color: white;
+        border: none;
+        padding: 16px 32px;
+        font-size: 1.6rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .contact-form button:hover {
+        background-color: #0e76a8;
+    }
+    footer {
+        background-color: #0e76a8;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    footer h4 {
+        font-size: 1.8rem;
+        margin: 10px 0;
+    }
+    footer p {
+        font-size: 1.4rem;
+        margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">FoodBridge</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about_page.html">ABOUT</a></li>
+      <li class="active"><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero-section">
+  <h1>Contact Us</h1>
+  <p>We'd love to hear from you! Reach out to us for any queries or support.</p>
+</div>
+
+<!-- Contact Form Section -->
+<div class="contact-section" id="contact-us">
+  <h1>Get in Touch</h1>
+  <p>If you have any questions, suggestions, or would like to get involved, feel free to send us a message. We are here to assist you!</p>
+  
+  <!-- Contact Details -->
+  <div class="contact-details">
+    <p><strong>Email:</strong> support@foodbridge.com</p>
+    <p><strong>Phone:</strong> +1 234 567 890</p>
+  </div>
+  
+  <!-- Contact Form -->
+  <form class="contact-form" action="submit_contact_form.php" method="POST">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+    
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+    
+    <label for="phone">Your Phone Number</label>
+    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+    
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+    
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer>
+  <h4>Stay Connected</h4>
+  <p>&copy; 2025 FoodBridge. All Rights Reserved.</p>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

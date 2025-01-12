@@ -49,6 +49,7 @@
             padding: 12px;
             margin-bottom: 20px;
             border: 1px solid #ccc;
+            color: black;
             border-radius: 5px;
             font-size: 16px;
         }
@@ -74,6 +75,17 @@
             bottom: 0;
             width: 100%;
         }
+        select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: black; /* Set text color to black */
+  background-color: white; /* Set background color to white */
+}
+
     </style>
 </head>
 <body>
@@ -86,7 +98,7 @@
         </div>
         <ul class="nav navbar-nav">
             <li><a href="front_page.html">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
+            <li><a href="about_page.html">ABOUT</a></li>
             <li><a href="#">CONTACT</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -127,6 +139,8 @@
         <label for="address"><b>Pickup Address:</b></label>
         <input type="text" id="address" name="address" required placeholder="Enter your address for food pickup">
         
+        <label for="location">Location (City/Region):</label>
+    <input type="text" id="location" name="location" required placeholder="Enter your city or region">
         <input type="submit" value="Register">
     </form>
 </div>
