@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - FoodBridge</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #333;
+            color: #fff;
+        }
+        .navbar a {
+            color: #fff;
+        }
+        .container {
+            margin: 50px auto;
+            max-width: 800px;
+        }
+        h1 {
+            color: #333;
+        }
+        .logout-btn {
+            background-color: #d9534f;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .logout-btn:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">FoodBridge Admin</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="container">
+        <h1>Welcome to the Admin Dashboard</h1>
+        <p>Manage users, donations, and reports here.</p>
+
+        <a href="logout.php" class="logout-btn">Logout</a>
+    </div>
+</body>
+</html>
