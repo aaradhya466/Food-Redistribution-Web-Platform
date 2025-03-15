@@ -75,6 +75,18 @@
             bottom: 0;
             width: 100%;
         }
+        .error-message {
+    display: none;
+    background-color: #d8000c; /* Red background */
+    color: white; /* White text */
+    padding: 12px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
     </style>
 </head>
 <body>
@@ -104,17 +116,20 @@
   
   <!-- Display error message -->
   <?php if (isset($_GET['error'])): ?>
-      <div class="error" style="color: red; text-align: center;">
-          <?php
-          if ($_GET['error'] == 'incorrect_password') {
-              echo "Incorrect password. Please try again.";
-          } elseif ($_GET['error'] == 'no_account') {
-              echo "No account found with that email.";
-          }
-          ?>
-      </div>
-  <?php endif; ?>
+    <div class="error-message" id="error-message">
+        <?php
+        if ($_GET['error'] == 'incorrect_password') {
+            echo "❌ Incorrect password. Please try again.";
+        } elseif ($_GET['error'] == 'no_account') {
+            echo "🔍 No account found with that email.";
+        }
+        ?>
+    </div>
+<?php endif; ?>
+
   
+
+
   <form action="admin_login.php" method="post">
     <label for="email">Email ID:</label>
     <input type="email" id="email" name="email" required placeholder="Enter your email">
@@ -134,4 +149,35 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
+<script>
+    function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+const errorMessage = getQueryParam("error");
+if (errorMessage) {
+    let messageText = "";
+    switch (errorMessage) {
+        case "empty_fields":
+            messageText = "⚠️ Please fill in all fields.";
+            break;
+        case "invalid_credentials":
+            messageText = "❌ Invalid email or password.";
+            break;
+        case "user_not_found":
+            messageText = "🔍 No user found with this email.";
+            break;
+        default:
+            messageText = "⚠️ An unknown error occurred. Please try again.";
+    }
+
+    const errorDiv = document.getElementById("error-message");
+    if (errorDiv) {
+        errorDiv.innerHTML = messageText;
+        errorDiv.style.display = "block";
+    }
+}
+
+</script>
 </html>
