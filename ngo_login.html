@@ -90,11 +90,24 @@
             text-decoration: underline;
         }
 
-        .error {
-            color: red;
+        .message {
             text-align: center;
-            margin-bottom: 10px;
+            font-size: 1rem;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
         }
+
+        .success {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .error {
+            background-color: #f44336;
+            color: white;
+        }
+
         footer {
             background-color: rgba(0, 0, 0, 0.8);
             color: #fff;
@@ -104,10 +117,30 @@
             bottom: 0;
             width: 100%;
         }
+        .error-message {
+    display: none;
+    background-color: #d8000c; /* Red background */
+    color: white; /* White text */
+    padding: 12px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%;
+}
     </style>
 </head>
 <body>
-
+    <?php
+    session_start();
+    if (isset($_SESSION['login_error'])) {
+        $error_message = $_SESSION['login_error'];
+        unset($_SESSION['login_error']); // Clear the error after displaying it
+    } else {
+        $error_message = "";
+    }
+    ?>
+    
 <!-- Navbar -->
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -130,21 +163,11 @@
 <!-- NGO Login Form -->
 <div class="form-container">
     <h2>NGO Login</h2>
-    
-    <!-- Display error message -->
-    <?php if (isset($_GET['error'])): ?>
-        <div class="error" style="color: red; text-align: center;">
-            <?php
-            if ($_GET['error'] == 'incorrect_password') {
-                echo "Incorrect password. Please try again.";
-            } elseif ($_GET['error'] == 'no_account') {
-                echo "No account found with that email. Please sign up.";
-            }
-            ?>
-        </div>
-    <?php endif; ?>
-    
-    <form action="login.php" method="post">
+
+ <!-- Error Message (Initially hidden, shown dynamically) -->
+ <div id="error-message" class="error-message"></div>
+
+    <form action="ngo_login.php" method="post">
         <label for="email">Email ID:</label>
         <input type="email" id="email" name="email_id" required placeholder="Enter your email">
         
@@ -158,12 +181,38 @@
         <p>Don't have an account? <a href="ngo_register.html">Sign Up</a></p>
     </div>
 </div>
+
 <!-- Footer -->
 <footer>
     © 2025 FoodBridge. All Rights Reserved.
-  </footer>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</footer>
 </body>
+<script>
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    const errorMessage = getQueryParam("error");
+    if (errorMessage) {
+        let messageText = "";
+        switch (errorMessage) {
+            case "empty_fields":
+                messageText = "⚠️ Please fill in all fields.";
+                break;
+            case "invalid_credentials":
+                messageText = "❌ Invalid email or password.";
+                break;
+            case "user_not_found":
+                messageText = "🔍 No user found with this email.";
+                break;
+            default:
+                messageText = "⚠️ An unknown error occurred. Please try again.";
+        }
+
+        const errorDiv = document.getElementById("error-message");
+        errorDiv.innerHTML = messageText;
+        errorDiv.style.display = "block";
+    }
+</script>
 </html>
