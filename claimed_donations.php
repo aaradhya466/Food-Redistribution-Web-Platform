@@ -55,7 +55,7 @@ if (!$result) {
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">FoodBridge | Claimed Donations</a>
-            <a href="ngo_dashboard.php" class="btn btn-outline-light">Back to Dashboard</a>
+            <a href="ngo_dashboard.html" class="btn btn-outline-light">Back to Dashboard</a>
         </div>
     </nav>
 
