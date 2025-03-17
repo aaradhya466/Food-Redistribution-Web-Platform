@@ -11,26 +11,24 @@
         font-family: 'Poppins', sans-serif;
         margin: 0;
         padding: 0;
-        background: url('https://via.placeholder.com/1500x1000') no-repeat center center fixed;
-        background-size: cover;
-        color: #fff;
+        background: #121212;
+        color: #e0e0e0;
     }
     .navbar-inverse {
-        background-color: #0e76a8;
+        background-color: #1e1e1e;
         border: none;
     }
     .navbar-inverse .navbar-brand, 
     .navbar-inverse .nav > li > a {
-        color: #fff;
+        color: #ffffff;
     }
     .navbar-inverse .navbar-nav > li > a:hover {
-        background-color: #17a2b8;
-        color: #fff;
+        background-color: #333;
+        color: #17a2b8;
     }
     .hero-section {
-        background-color: rgba(14, 118, 168, 0.7);
+        background-color: rgba(30, 30, 30, 0.9);
         padding: 120px 0;
-        color: #fff;
         text-align: center;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
@@ -39,12 +37,9 @@
         font-weight: 600;
         margin-bottom: 20px;
     }
-    .hero-section p {
-        font-size: 1.6rem;
-    }
     .contact-section {
         padding: 80px 20px;
-        background: #fff;
+        background: #1e1e1e;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
         margin: 60px auto;
@@ -53,34 +48,29 @@
     .contact-section h1 {
         font-size: 3.8rem;
         font-weight: 600;
-        color: #0e76a8;
+        color: #17a2b8;
         margin-bottom: 30px;
     }
     .contact-section p {
         font-size: 1.5rem;
         line-height: 1.8;
         margin-bottom: 30px;
-        color: #555;
-    }
-    .contact-details {
-        font-size: 1.5rem;
-        margin-bottom: 30px;
-        color: #0e76a8;
+        color: #b0b0b0;
     }
     .contact-form label {
         font-size: 1.4rem;
         font-weight: 600;
-        color: #555;
+        color: #e0e0e0;
     }
     .contact-form input, .contact-form textarea {
         width: 100%;
         padding: 14px;
         margin-bottom: 20px;
-        border: 1px solid #ccc;
+        border: 1px solid #555;
         border-radius: 5px;
         font-size: 1.3rem;
-        background-color: #f4f7fa;
-        color: black;
+        background-color: #222;
+        color: #fff;
     }
     .contact-form textarea {
         height: 200px;
@@ -99,8 +89,8 @@
         background-color: #0e76a8;
     }
     footer {
-        background-color: #0e76a8;
-        color: #fff;
+        background-color: #1e1e1e;
+        color: #e0e0e0;
         text-align: center;
         padding: 20px 0;
     }
@@ -115,7 +105,6 @@
   </style>
 </head>
 <body>
-<!-- Navbar -->
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -128,48 +117,33 @@
     </ul>
   </div>
 </nav>
-
-<!-- Hero Section -->
 <div class="hero-section">
   <h1>Contact Us</h1>
   <p>We'd love to hear from you! Reach out to us for any queries or support.</p>
 </div>
-
-<!-- Contact Form Section -->
 <div class="contact-section" id="contact-us">
   <h1>Get in Touch</h1>
-  <p>If you have any questions, suggestions, or would like to get involved, feel free to send us a message. We are here to assist you!</p>
-  
-  <!-- Contact Details -->
+  <p>If you have any questions, suggestions, or would like to get involved, feel free to send us a message.</p>
   <div class="contact-details">
     <p><strong>Email:</strong> support@foodbridge.com</p>
-    <p><strong>Phone:</strong> +1 234 567 890</p>
+    <p><strong>Phone:</strong> +91 9729358605</p>
   </div>
-  
-  <!-- Contact Form -->
   <form class="contact-form" action="submit_contact_form.php" method="POST">
     <label for="name">Your Name</label>
     <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-    
     <label for="email">Your Email</label>
     <input type="email" id="email" name="email" placeholder="Your Email Address" required>
-    
     <label for="phone">Your Phone Number</label>
     <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
-    
     <label for="message">Your Message</label>
     <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
-    
     <button type="submit">Send Message</button>
   </form>
 </div>
-
-<!-- Footer -->
 <footer>
   <h4>Stay Connected</h4>
   <p>&copy; 2025 FoodBridge. All Rights Reserved.</p>
 </footer>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>

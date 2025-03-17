@@ -4,42 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NGO Dashboard - FoodBridge</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <!-- Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    
+    <style>
+        /* Dark Theme */
+        body { background-color: #121212; color: white; font-family: Arial, sans-serif; }
+        
+        /* Navbar */
+        .navbar { background-color: #1f1f1f; padding: 12px; }
+        .navbar-brand { font-size: 20px; }
+        .btn-outline-light:hover { background-color: #28a745; color: white; }
+        .logout-btn { background-color: #e63946; color: white; border-radius: 8px; }
+        .logout-btn:hover { background-color: #c82333; }
+
+        /* Dashboard Styling */
+        .dashboard-container { margin-top: 50px; }
+        .card { background-color: #1f1f1f; color: white; border-radius: 10px; padding: 20px; }
+        .card-title { font-size: 20px; }
+        .btn-custom { border-radius: 8px; padding: 10px 20px; font-size: 16px; }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-inverse">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark">
         <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">FoodBridge</a>
+            <a class="navbar-brand" href="#">FoodBridge | NGO Dashboard</a>
+            <div>
+                <a href="view_available_donations.php" class="btn btn-outline-light me-2">View Donations</a>
+                <a href="claimed_donations.php" class="btn btn-outline-light me-2">My Donations</a>
+                <a href="ngo_logout.php" class="btn logout-btn">Logout</a>
             </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="ngo_logout.php" class="btn btn-danger navbar-btn" style="color: white;">Logout</a></li>
-            </ul>
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container dashboard-container">
         <h2 class="text-center">Welcome to NGO Dashboard</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">View Available Donations</div>
-                    <div class="panel-body">
-                        <p>Check and claim available food donations.</p>
-                        <a href="view_available_donations.php" class="btn btn-success">View Donations</a>
-                    </div>
+        <div class="row mt-4">
+            <div class="col-md-6 mb-3">
+                <div class="card shadow-lg">
+                    <h5 class="card-title">View Available Donations</h5>
+                    <p>Check and claim available food donations.</p>
+                    <a href="view_available_donations.php" class="btn btn-success btn-custom">View Donations</a>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="panel panel-info">
-                    <div class="panel-heading">My Claimed Donations</div>
-                    <div class="panel-body">
-                        <p>Track the donations your NGO has claimed.</p>
-                        <a href="claimed_donations.php" class="btn btn-info">View My Donations</a>
-                    </div>
+            <div class="col-md-6 mb-3">
+                <div class="card shadow-lg">
+                    <h5 class="card-title">My Claimed Donations</h5>
+                    <p>Track the donations your NGO has claimed.</p>
+                    <a href="claimed_donations.php" class="btn btn-info btn-custom">View My Donations</a>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Bootstrap 5 Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

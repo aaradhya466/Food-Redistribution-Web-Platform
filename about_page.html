@@ -11,105 +11,87 @@
         font-family: 'Poppins', sans-serif;
         margin: 0;
         padding: 0;
-        background: url('https://via.placeholder.com/1500x1000') no-repeat center center fixed;
-        background-size: cover;
-        color: #fff;
+        background-color: #121212;
+        color: #e0e0e0;
     }
     .navbar-inverse {
-        background-color: #0e76a8;
+        background-color: #222;
         border: none;
     }
     .navbar-inverse .navbar-brand, 
     .navbar-inverse .nav > li > a {
-        color: #fff;
+        color: #e0e0e0;
     }
     .navbar-inverse .navbar-nav > li > a:hover {
-        background-color: #17a2b8;
-        color: #fff;
+        background-color: #333;
+        color: #17a2b8;
     }
     .hero-section {
-        background-color: rgba(14, 118, 168, 0.7);
+        background: #1c1c1c;
         padding: 120px 0;
-        color: #fff;
+        color: #e0e0e0;
         text-align: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
     .hero-section h1 {
-        font-size: 5rem;
+        font-size: 4rem;
         font-weight: 600;
-        margin-bottom: 20px;
     }
     .hero-section p {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     .about-section {
-        padding: 80px 20px;
-        background: #fff;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 60px 20px;
+        background: #1e1e1e;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         border-radius: 10px;
-        margin: 60px auto;
+        margin: 40px auto;
         max-width: 1100px;
     }
-    .about-section h1 {
-        font-size: 4rem;
-        font-weight: 600;
-        color: #0e76a8;
-        margin-bottom: 30px;
+    .about-section h1, .about-section h3 {
+        color: #17a2b8;
     }
     .about-section p {
-        font-size: 1.6rem;
-        line-height: 1.8;
-        margin-bottom: 30px;
-        color: #555;
-    }
-    .about-section h3 {
-        font-size: 2.2rem;
-        font-weight: 600;
-        color: #17a2b8;
-        margin-bottom: 20px;
+        font-size: 1.4rem;
+        color: #cfcfcf;
     }
     .team-section {
-        padding: 80px 20px;
-        background-color: #f4f7fa;
-        margin-top: 60px;
+        padding: 60px 20px;
+        background: #2a2a2a;
         border-radius: 10px;
+        margin-top: 40px;
     }
     .team-section h2 {
-        font-size: 4rem;
+        font-size: 3rem;
         text-align: center;
-        margin-bottom: 40px;
-        color: #0e76a8;
+        color: #17a2b8;
     }
     .team-member {
         text-align: center;
-        margin: 40px;
+        margin: 30px;
     }
     .team-member img {
         border-radius: 50%;
-        width: 200px;
-        height: 200px;
-        border: 5px solid #fff;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        width: 180px;
+        height: 180px;
+        border: 4px solid #17a2b8;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
     .team-member h4 {
-        margin-top: 20px;
-        font-size: 2rem;
-        font-weight: 600;
-        color: #333;
+        margin-top: 15px;
+        font-size: 1.8rem;
+        color: #e0e0e0;
     }
     .team-member p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         color: #17a2b8;
-        font-weight: 500;
     }
     footer {
-        background-color: #0e76a8;
-        color: #fff;
+        background-color: #222;
+        color: #e0e0e0;
         text-align: center;
-        padding: 20px 0;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
+        padding: 15px 0;
+        margin-top: 40px;
     }
   </style>
 </head>
@@ -136,56 +118,54 @@
 </div>
 
 <!-- About Section -->
-<div class="about-section" id="about-us">
+<div class="about-section">
   <h1>About Us</h1>
   <p>FoodBridge is a platform dedicated to bridging the gap between surplus food and those in need. Our goal is to reduce food wastage and ensure that no one has to go hungry. We connect restaurants, cafes, event organizers, and other food donors with NGOs, volunteers, and people in need, allowing them to easily redistribute excess food.</p>
   <p>We believe in a future where food insecurity is eradicated, and we work tirelessly to make that future a reality. Join us in our mission to make the world a better place by reducing food waste and helping those in need.</p>
 </div>
 
 <!-- Our Mission Section -->
-<div class="about-section" id="our-mission">
+<div class="about-section">
   <h3>Our Mission</h3>
   <p>Our mission is simple: reduce food waste and alleviate hunger. We aim to connect individuals and organizations with excess food to those who can use it, creating a cycle of giving that benefits both communities and the environment.</p>
 </div>
 
 <!-- How It Works Section -->
-<div class="about-section" id="how-it-works">
+<div class="about-section">
   <h3>How It Works</h3>
-  <p>1. **Donors**: List surplus food available for donation.<br>
-     2. **NGOs**: Browse and claim available donations.<br>
-     3. **Volunteers**: Help facilitate the transportation and distribution of food.</p>
+  <p>1. Donors: List surplus food available for donation.<br>
+     2. NGOs: Browse and claim available donations.<br>
+     3. Volunteers: Help facilitate the transportation and distribution of food.</p>
 </div>
 
 <!-- Team Section -->
-<div class="team-section" id="our-team">
+<!-- Team Section -->
+<div class="team-section">
   <h2>Meet Our Team</h2>
   <div class="row">
     <div class="col-md-3 team-member">
-      <img src="icon.png" alt="Team Member 1">
-      <h4>John Doe</h4>
-      <p>Co-Founder & CEO</p>
-      <p>John is the visionary behind FoodBridge...</p>
+      <img src="icon.png" alt="Aaradhya">
+      <h4>Aaradhya</h4>
+      <p>Project Lead & Backend Developer</p>
     </div>
     <div class="col-md-3 team-member">
-      <img src="icon.png" alt="Team Member 2">
-      <h4>Jane Smith</h4>
-      <p>Co-Founder & CTO</p>
-      <p>Jane leads the technology efforts...</p>
+      <img src="icon.png" alt="Gautam Kaushik">
+      <h4>Gautam Kaushik</h4>
+      <p>Frontend Developer</p>
     </div>
     <div class="col-md-3 team-member">
-      <img src="icon.png" alt="Team Member 3">
-      <h4>Mark Brown</h4>
-      <p>Head of Operations</p>
-      <p>Mark ensures smooth operations and logistics for FoodBridge...</p>
+      <img src="icon.png" alt="Dhanur Bhatnagar">
+      <h4>Dhanur Bhatnagar</h4>
+      <p>Database Administrator</p>
     </div>
     <div class="col-md-3 team-member">
-      <img src="icon.png" alt="Team Member 4">
-      <h4>Emily White</h4>
-      <p>Marketing Manager</p>
-      <p>Emily handles all marketing strategies and public relations...</p>
+      <img src="icon.png" alt="Gagan Kapoor">
+      <h4>Gagan Kapoor</h4>
+      <p>UI/UX Designer</p>
     </div>
   </div>
 </div>
+
 
 <!-- Footer -->
 <footer>
